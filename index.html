@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MENU4YOU</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/media/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <nav
+      class="m4y_navbar navbar navbar-expand-lg navbar-dark bg-dark z-3 w-100 p-0 m-0 p-3 fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="m4y_logo navbar-brand ms-3" href="#">
+          <img
+            src="assets/media/logo.png"
+            alt=""
+            class="position-absolute border border-5 border-dark"
+            style="width: 100px; left: 30px; top: -30px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navbarToggler"
+        >
+          <i class="fa fa-bars text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav ms-lg-auto ms-3 me-5 mb-3 mb-lg-0 w-50 mt-lg-0 mt-5"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link me-3 w-100 text-light"
+                aria-current="page"
+                href="#m4y_menu"
+                >Menu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3 w-100 text-light" href="#m4y_best_offers"
+                >Best Offers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3 w-100 text-light" href="#m4y_about_us"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3 w-100 text-light" href="#m4y_contact_us"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <form class="m4y_form d-flex ms-lg-0 ms-3">
+            <input
+              id="m4y_menu_search"
+              class="m4y_menu_search bg-transparent border-0 border-bottom border-1 me-2 w-100"
+              type="text"
+              placeholder="Search"
+              onkeyup="handleMenuSearch()"
+              onkeypress="handleEnterKey(event)"
+            />
+            <button
+              class="m4y_search_btn btn text-light"
+              type="button"
+              onclick="scrollMenuSection()"
+            >
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <section class="m4y_vidsec position-relative d-flex justify-content-center">
+      <div
+        class="row position-absolute top-0 text-light px-4 h-100 align-content-center w-100 z-2"
+        style="padding-top: 80px"
+      >
+        <div class="position-relative">
+          <p class="h1">
+            Limited time<br /><span class="display-1">50% off</span
+            ><span class="d-md-inline d-none display-1 p-0 m-0">
+              | All items</span
+            ><br /><span class="d-md-none d-inline fs-2 p-0 m-0"
+              >| All items<br /></span
+            ><span class="fs-6 p-0 m-0">and more offers are awaiting!</span>
+          </p>
+          <div class="p-0">
+            <img
+              src="assets/media/coffee_top.png"
+              alt=""
+              id="coffeeImage"
+              class="m4y_spinning_coffee position-absolute w-25 end-0"
+              style="top: -10%"
+            />
+          </div>
+        </div>
+        <div>
+          <button class="m4y_our_menu btn border border-light text-light mt-3">
+            <a href="#m4y_menu" class="nav-link">Our Menu</a>
+          </button>
+        </div>
+      </div>
+      <video
+        autoplay
+        muted
+        loop
+        src="assets/media/vidcover.mp4"
+        class="position-absolute w-100 h-100 object-fit-cover"
+      ></video>
+    </section>
+    <div
+      class="m4y_daily_quote align-content-center border-0 border-top border-bottom border-dark rounded-end-3 my-3"
+    >
+      <p class="text-start text-light m-0 mx-4">
+        Daily quote: <i>"Coffee is a language itself." </i>-Jackie Chan
+      </p>
+    </div>
+    <div id="m4y_menu" class="m4y_scroll_section"></div>
+    <main>
+      <div class="m-4">
+        <hr class="text-light opacity-50 my-4 border-5 rounded" />
+        <p class="h3 fw-bold text-light">CATEGORIES</p>
+      </div>
+      <section class="row mb-1 mx-2 g-2 pb-3">
+        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+          <div class="card position-relative border-0">
+            <img src="assets/media/hot_coffee.png" alt="" />
+            <div
+              class="m4y_category position-absolute bg-dark bottom-0 end-0 text-light px-3 py-2 w-75 text-start"
+            >
+              <p class="m4y_category_text m-0 fw-bold">HOT COFFEE</p>
+            </div>
+          </div>
+          <div class="m4y_items_container p-2 border border-light rounded my-3">
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Spanish Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">68</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Mocha Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">68</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+          <div class="card position-relative border-0">
+            <img src="assets/media/hot_coffee.png" alt="" />
+            <div
+              class="m4y_category position-absolute bg-dark bottom-0 end-0 text-light px-3 py-2 w-75 text-start"
+            >
+              <p class="m4y_category_text m-0 fw-bold">ICE COFFEE</p>
+            </div>
+          </div>
+          <div class="m4y_items_container p-2 border border-light rounded my-3">
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Caramel Macchiato</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Spanish Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Hazelnut Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Salted Caramel Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Strawberry Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">White Mocha Latte</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+          <div class="card position-relative border-0">
+            <img src="assets/media/non_coffee.png" alt="" />
+            <div
+              class="m4y_category position-absolute bg-dark bottom-0 end-0 text-light px-3 py-2 w-75 text-start"
+            >
+              <p class="m4y_category_text m-0 fw-bold">NON-COFFEE</p>
+            </div>
+          </div>
+          <div class="m4y_items_container p-2 border border-light rounded my-3">
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Milky Strawberry</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Strawberry Matcha</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Chocolate Float</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Milky Matcha</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+          <div class="card position-relative border-0">
+            <img src="assets/media/frappe.png" alt="" />
+            <div
+              class="m4y_category position-absolute bg-dark bottom-0 end-0 text-light px-3 py-2 w-75 text-start"
+            >
+              <p class="m4y_category_text m-0 fw-bold">FRAPPE</p>
+            </div>
+          </div>
+          <div class="m4y_items_container p-2 border border-light rounded my-3">
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Mango Graham</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Java Chip</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Vanilla Matcha</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Strawberry</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">108</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+          <div class="card position-relative border-0">
+            <img src="assets/media/croffle.png" alt="" />
+            <div
+              class="m4y_category position-absolute bg-dark bottom-0 end-0 text-light px-3 py-2 w-75 text-start"
+            >
+              <p class="m4y_category_text m-0 fw-bold">CROFFLES</p>
+            </div>
+          </div>
+          <div class="m4y_items_container p-2 border border-light rounded my-3">
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Plain</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Nutella</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Cookies and Cream</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Creamy Strawberry</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Creamy Matcha</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Nutella Almond</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">98</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+          <div class="card position-relative border-0">
+            <img src="assets/media/add_ons.png" alt="" />
+            <div
+              class="m4y_category position-absolute bg-dark bottom-0 end-0 text-light px-3 py-2 w-75 text-start"
+            >
+              <p class="m4y_category_text m-0 fw-bold">ADD-ONS</p>
+            </div>
+          </div>
+          <div class="m4y_items_container p-2 border border-light rounded my-3">
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Sauce</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">28</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Sugar</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">28</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Expresso Shot</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">28</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Milk</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">28</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Almond Milk</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">28</p>
+              </div>
+            </div>
+            <div
+              class="m4y_items rounded m-1 d-flex align-items-center px-2 text-light"
+            >
+              <div class="my-1">
+                <p class="m4y_items_text m-0">Iced Cream</p>
+              </div>
+              <div class="text-truncate">
+                <p class="m-0 ps-2">
+                  ....................................................................................................................................................................................................................
+                </p>
+              </div>
+              <div>
+                <p class="m-0 ps-1">28</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="m4y_best_offers" class="m4y_scroll_section"></div>
+      <section class="m4y_parallax py-3 px-3 pb-4 mb-4 position-relative">
+        <h4
+          class="m4y_best_offers_text text-light display-5 fw-bold m-0 p-0 lh-1 py-3"
+        >
+          BEST OFFERS
+        </h4>
+        <p
+          class="m-0 p-0 lh-1 text-light"
+          style="text-shadow: 1px 1px 2px black"
+        >
+          Currently active: 2
+        </p>
+        <div class="col-lg-10 col-12">
+          <div class="row g-3 py-4">
+            <div class="position-relative col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="m4y_promo_img position-relative w-100 h-100 rounded">
+                <img
+                  src="assets/media/promo1.png"
+                  alt=""
+                  class="w-100 position-relative rounded"
+                />
+                <div
+                  class="position-absolute rounded top-0 left-0 w-100 h-100 ps-4 pe-4 pt-5"
+                >
+                  <h3 class="m4y_speacialpromo fw-bold">SPECIAL PROMO</h3>
+                  <p class="m4y_specialpromotext text-light mb-4">
+                    Get a coffee and gain additional M4Y points!
+                  </p>
+                  <button
+                    class="rounded border-light bg-transparent text-light mb-2"
+                  >
+                    <span class="fs-6">GET NOW</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <img src="assets/media/promo2.png" alt="" class="w-100 rounded" />
+            </div>
+            <div class="col-lg-3 col-12">
+              <div
+                class="card bg-dark justify-content-center align-items-center h-100"
+              >
+                <h6 class="fw-bold text-light p-3 m-0">COMING SOON...</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="m4y_about_us" class="m4y_scroll_section"></div>
+      <section class="m-4 pb-3">
+        <hr class="text-light opacity-50 mt-0 border-5 rounded w-100" />
+        <h5 class="h3 fw-bold text-light my-4">ABOUT US</h5>
+        <div class="w-100 d-flex justify-content-center">
+          <div class="row g-lg-2 g-3">
+            <div class="col-md-6 col-sm-6 col-12 d-flex pb-sm-4 pb-0">
+              <div
+                class="card h-100"
+                style="
+                  background: url('assets/media/coffee_chair.jpg');
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                "
+              >
+                <h5 class="fw-bold p-4 pb-0">
+                  Welcome to
+                  <span class="fw-normal" style="font-family: Georgia"
+                    >MENU4YOU™</span
+                  >
+                </h5>
+                <div
+                  class="mt-0 text-dark p-4"
+                  style="
+                    height: 220px;
+                    overflow-y: scroll;
+                    background-color: rgba(255, 255, 255, 0.447);
+                  "
+                >
+                  <p style="font-size: 80%">
+                    At MENU4YOU, we blend our passion for coffee and technology
+                    to create a unique digital experience for coffee enthusiasts
+                    everywhere. We're a team of dedicated developer-baristas,
+                    each bringing a unique set of skills to craft an innovative
+                    centralized coffee menu that showcases a wide array of
+                    coffee brands and flavors.
+                  </p>
+                  <p style="font-size: 80%">
+                    Our mission is to make it easier for you to discover and
+                    enjoy the finest coffee blends, all in one convenient
+                    location. Whether you're a seasoned coffee connoisseur or
+                    just beginning your journey into the world of coffee,
+                    MENU4YOU is designed to cater to all your needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex d-md-block pb-sm-4 pb-0"
+            >
+              <div class="p-2 bg-light h-100">
+                <div class="row g-0">
+                  <div class="col-6 position-relative">
+                    <img src="assets/media/kaishaun.png" alt="" class="w-100" />
+                    <div
+                      class="position-absolute z-1 w-100 h-100 object-fit-cover d-flex justify-content-center align-items-end"
+                      style="bottom: 0"
+                    >
+                      <p
+                        class="text-light"
+                        style="font-size: 60%; text-shadow: 1px 1px 2px black"
+                      >
+                        Kaishaun Gonzaga
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 position-relative">
+                    <img src="assets/media/drixen.jpg" alt="" class="w-100" />
+                    <div
+                      class="position-absolute z-1 w-100 h-100 object-fit-cover d-flex justify-content-center align-items-end"
+                      style="bottom: 0"
+                    >
+                      <p
+                        class="text-light"
+                        style="font-size: 60%; text-shadow: 1px 1px 2px black"
+                      >
+                        Drixen Paul Calzado
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-0">
+                  <div class="col-6 position-relative">
+                    <img
+                      src="assets/media/christian.jpg"
+                      alt=""
+                      class="w-100"
+                    />
+                    <div
+                      class="position-absolute z-1 w-100 h-100 object-fit-cover d-flex justify-content-center align-items-end"
+                      style="bottom: 0"
+                    >
+                      <p
+                        class="text-light"
+                        style="font-size: 60%; text-shadow: 1px 1px 2px black"
+                      >
+                        Christian James Maaño
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 position-relative">
+                    <img src="assets/media/rainer.jpg" alt="" class="w-100" />
+                    <div
+                      class="position-absolute z-1 w-100 h-100 object-fit-cover d-flex justify-content-center align-items-end"
+                      style="bottom: 0"
+                    >
+                      <p
+                        class="text-light"
+                        style="font-size: 60%; text-shadow: 1px 1px 2px black"
+                      >
+                        Rainer Jack Altaraz
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-1">
+                  <p class="m-0 fs-5 p-0 m-0 text-center">
+                    "The Blend Maestros"
+                  </p>
+                  <p class="p-0 m-0 text-center" style="font-size: 55%">
+                    - People behind the blend -
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="m4y_last_ads col pb-4 position-relative">
+              <span class="close-btn"
+                ><i
+                  class="fa fa-times-circle position-absolute fs-3"
+                  style="right: 15px; top: 15px"
+                ></i
+              ></span>
+              <img
+                src="assets/media/ads.png"
+                alt=""
+                class="w-100 h-100 rounded d-lg-block d-md-none d-block"
+              />
+              <img
+                src="assets/media/ad_min.png"
+                alt=""
+                class="m4y_min_ad w-100 h-100 rounded d-lg-none d-md-block d-none"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="m4y_footer row p-0 m-0 p-4 py-5 bg-dark text-light gx-5">
+        <div class="col-md-6 col-12">
+          <div>
+            <h5 class="fw-bold">DISCLAIMER</h5>
+            <hr class="text-light opacity-50 mt-0 border-5 rounded" />
+            <p>
+              This website is for educational purposes only. No copyright
+              infringement is intended. All materials, including texts, images,
+              videos, etc., are used solely for educational and informational
+              purposes.
+            </p>
+            <p>
+              If you believe that any content infringes on your copyright,
+              please contact us immediately for removal.
+            </p>
+          </div>
+          <div class="mt-5">
+            <h5 class="fw-bold">FOLLOW US</h5>
+            <hr class="text-light opacity-50 mt-0 border-5 rounded w-75" />
+            <div class="d-flex w-25 justify-content-between">
+              <i
+                class="m4y_icons fa fa-facebook fs-4 d-flex justify-content-center align-items-center border border-light rounded-circle me-3 bg-dark"
+              ></i>
+              <i
+                class="m4y_icons fa fa-twitter fs-4 d-flex justify-content-center align-items-center border border-light rounded-circle me-3 bg-dark"
+              ></i>
+              <i
+                class="m4y_icons fa fa-instagram fs-4 d-flex justify-content-center align-items-center border border-light rounded-circle me-3 bg-dark"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-12 mt-md-0 mt-5">
+          <div id="m4y_contact_us">
+            <h5 class="fw-bold">CONTACT US</h5>
+            <hr class="text-light opacity-50 mt-0 border-5 rounded w-50" />
+            <p>
+              <span><i class="fa fa-phone fs-5 me-3"></i></span> +63 123 456
+              7890 (Sample No.)
+            </p>
+            <p>
+              <span><i class="fa fa-envelope fs-5 me-3"></i></span>
+              supermanny46@gmail.com (Real Email)
+            </p>
+            <p>
+              <span><i class="fa fa-map-marker fs-5 me-3"></i></span> CvSU
+              Avenue Brgy. Biga 1, Silang, Cavite 4118
+            </p>
+          </div>
+          <div class="col-12 col-sm-8 col-md-12 col-lg-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.206624909968!2d120.97643427361432!3d14.24116558577855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7e7d0744eafd%3A0xf25bff0f1b1deb7b!2sCavite%20State%20University%2C%20Silang%20Campus!5e0!3m2!1sen!2sph!4v1716682952884!5m2!1sen!2sph"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="rounded mt-4 h-50 w-100"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="m4y_bottom_ad">
+      <p class="p-0 m-0 fw-bold text-light text-end">
+        <span><i class="fa fa-coffee me-2"></i></span>Enjoy the limited time
+        amazing deals in
+        <span
+          ><a href="#m4y_best_offers" class="text-light">best offers</a></span
+        >!
+      </p>
+      <div class="py-3 px-5"></div>
+      <button class="m4y_bottomadclose" onclick="closeAdBanner()">Close</button>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // window.onload = function () {
+      //   alert(
+      //     "This website is for educational purposes only. No copyright infringement is intended. All materials, including texts, images, videos, etc., are used solely for educational and informational purposes.\n\nIf you believe that any content infringes on your copyright, please contact us immediately for removal.\n\n@testysmpl@gmail.com"
+      //   );
+      // };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgerIcon = document.getElementById("navbarToggler");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function isSmallScreen() {
+          return window.innerWidth < 992;
+        }
+
+        navLinks.forEach(function (navLink) {
+          navLink.addEventListener("click", function () {
+            if (isSmallScreen()) {
+              burgerIcon.click();
+            }
+          });
+        });
+      });
+
+      const images = [
+        "assets/media/coffee_top.png",
+        "assets/media/spin_croffle.png",
+        "assets/media/retro_disc.png",
+      ];
+      let currentIndex = 0;
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("coffeeImage").src = images[currentIndex];
+      }, 5000);
+
+      const menuSearchInput = document.getElementById("m4y_menu_search");
+
+      menuSearchInput.addEventListener("keyup", (e) => {
+        let searchQuery = e.target.value.trim().toLowerCase();
+        let allMenuItems = document.querySelectorAll(".m4y_items");
+
+        for (let item of allMenuItems) {
+          let itemName = item
+            .querySelector(".m4y_items_text")
+            .textContent.toLowerCase();
+          let itemContainer = item.closest(".m4y_items_container");
+
+          if (itemName.includes(searchQuery)) {
+            item.style.opacity = "1";
+            item.classList.remove("m4y_nohover");
+            itemContainer.insertBefore(item, itemContainer.firstChild);
+          } else {
+            item.style.opacity = "0.3";
+            item.classList.add("m4y_nohover");
+            itemContainer.appendChild(item);
+          }
+        }
+      });
+
+      function scrollSearch() {
+        const menu = document.getElementById("m4y_menu");
+        if (menu) {
+          menu.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var input = document.getElementById("m4y_menu_search");
+        input.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            scrollSearch();
+          }
+        });
+      });
+
+      var input = document.getElementById("m4y_menu_search");
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          scrollSearch();
+          scrollMenuSection();
+        }
+      });
+
+      function scrollMenuSection() {
+        const containers = document.querySelectorAll(".m4y_items_container");
+        containers.forEach((container) => {
+          container.scrollTop = 0;
+        });
+      }
+
+      function showAdBanner() {
+        const banner = document.getElementById("m4y_bottom_ad");
+        if (window.scrollY > 100 && !sessionStorage.getItem("adBannerClosed")) {
+          banner.classList.add("show");
+        } else {
+          banner.classList.remove("show");
+        }
+      }
+
+      function closeAdBanner() {
+        const banner = document.getElementById("m4y_bottom_ad");
+        banner.classList.remove("show");
+        sessionStorage.setItem("adBannerClosed", "true");
+      }
+
+      window.addEventListener("scroll", showAdBanner);
+
+      document
+        .querySelector(".close-btn")
+        .addEventListener("click", function () {
+          document.querySelector(".m4y_last_ads").style.display = "none";
+        });
+    </script>
+  </body>
+</html>
